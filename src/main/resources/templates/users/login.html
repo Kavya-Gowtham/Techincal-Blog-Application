@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+
+<head th:replace="layout :: side-head">
+    <title>Technical Blog Application</title>
+</head>
+<header th:replace="layout :: logged-out"></header>
+
+<body>
+    //here th:object defines an object of user which is an model which has user login details and credentials of each user.
+    <form method="post" th:object="${user}">
+        <label for="UserName">UserName</label>
+        <input type="text" id="UserName">
+        <label for="Password">Password</label>
+        <input type="password" id="Password">
+        <input type="submit" value="Login">
+    </form>
+</body>
